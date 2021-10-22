@@ -1,0 +1,29 @@
+scalar Time
+
+type Query {
+  convert(from: Symbol = EUR, to: Symbol = USD, amount: Float! = 0): ConversionResult!
+}
+
+type Mutation {
+  createProject(project: ProjectInput!): Project!
+}
+
+enum Symbol {
+  EUR
+  USD
+}
+
+type ConversionResult {
+  timestamp: Time!
+  rate: Float!
+  result: Float!
+}
+
+type Project {
+  name: String!
+  accessKey: String!
+}
+
+input ProjectInput {
+  name: String!
+}

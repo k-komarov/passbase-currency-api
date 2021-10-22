@@ -23,27 +23,28 @@ convert(from: EUR to: USD amount: 10) {
 
 ![Example](screenshot.png "Example")
 
-### Tech stack
-___
+### 1. Tech stack
+
 * Golang
 * GraphQL
 * Docker
 * Docker Compose
-
-### Dependencies
 ___
+
+### 2. Dependencies
+
 #### External golang packages
 * Go library for building GraphQL servers – https://github.com/99designs/gqlgen
 * Structured logger for Go (golang) – https://github.com/sirupsen/logrus
 * Go library for UUID generation – https://github.com/google/uuid
 #### External services
 * Foreign exchange rates and currency conversion JSON API – https://fixer.io
-
-### Contribution
 ___
+### 3. Contribution
+
 Use https://github.com/99designs/gqlgen to get basic knowledge
 
-#### Development
+#### 3.1. Development
 1. Do change in `.graphqls` files
 2. Run generator to generate new or update code according to new schema
 ```
@@ -51,7 +52,7 @@ $ make regenerate
 ```
 3. Implement resolvers according to your needs
 
-#### Running locally
+#### 3.2. Running locally
 Execute command
 ```
 $ make run
@@ -59,13 +60,13 @@ $ make run
 
 Run the playground in browser: http://localhost:3000
 
-#### Running Unit Tests
+#### 3.3. Running Unit Tests
 Execute command
 ```
 $ make test
 ```
-
-### Containerized environment
+___
+### 4. Containerized environment
 
 To build a container Docker and Docker-Compose has to be installed:  
 * https://docs.docker.com/get-docker/
